@@ -85,7 +85,7 @@ object FormCash: TFormCash
     Margins.Right = 4
     Margins.Bottom = 4
     Anchors = [akRight, akBottom]
-    Caption = 'Add 1'
+    Caption = 'Add $1'
     TabOrder = 1
     OnClick = BtnAddPCashClick
     ExplicitLeft = 250
@@ -101,7 +101,7 @@ object FormCash: TFormCash
     Margins.Right = 4
     Margins.Bottom = 4
     Anchors = [akRight, akBottom]
-    Caption = 'Take 1'
+    Caption = 'Take $1'
     TabOrder = 2
     OnClick = BtnTakePCashClick
     ExplicitLeft = 420
@@ -117,7 +117,7 @@ object FormCash: TFormCash
     Margins.Right = 4
     Margins.Bottom = 4
     Anchors = [akRight, akBottom]
-    Caption = 'Add 1'
+    Caption = 'Add $1'
     TabOrder = 3
     OnClick = BtnAddEntBudgetClick
     ExplicitLeft = 248
@@ -133,7 +133,7 @@ object FormCash: TFormCash
     Margins.Right = 4
     Margins.Bottom = 4
     Anchors = [akRight, akBottom]
-    Caption = 'Take 1'
+    Caption = 'Take $1'
     TabOrder = 4
     OnClick = BtnTakeEntBudgetClick
     ExplicitLeft = 419
@@ -149,7 +149,7 @@ object FormCash: TFormCash
     Margins.Right = 4
     Margins.Bottom = 4
     Anchors = [akRight, akBottom]
-    Caption = 'Add 1'
+    Caption = 'Add $1'
     TabOrder = 5
     OnClick = BtnAddFuelClick
     ExplicitLeft = 249
@@ -165,7 +165,7 @@ object FormCash: TFormCash
     Margins.Right = 4
     Margins.Bottom = 4
     Anchors = [akRight, akBottom]
-    Caption = 'Take 1'
+    Caption = 'Take $1'
     TabOrder = 6
     OnClick = BtnTakeFuelClick
     ExplicitLeft = 418

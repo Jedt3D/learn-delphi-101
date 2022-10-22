@@ -6,6 +6,12 @@
         <Projects Include="00_HelloWorld\HelloWorld.dproj">
             <Dependencies/>
         </Projects>
+        <Projects Include="01_VariableAndConstant\VariableAndConstant.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="02_VariableAndConstant2\VariableAndConstant2.dproj">
+            <Dependencies/>
+        </Projects>
     </ItemGroup>
     <ProjectExtensions>
         <Borland.Personality>Default.Personality.12</Borland.Personality>
@@ -23,14 +29,32 @@
     <Target Name="HelloWorld:Make">
         <MSBuild Projects="00_HelloWorld\HelloWorld.dproj" Targets="Make"/>
     </Target>
+    <Target Name="VariableAndConstant">
+        <MSBuild Projects="01_VariableAndConstant\VariableAndConstant.dproj"/>
+    </Target>
+    <Target Name="VariableAndConstant:Clean">
+        <MSBuild Projects="01_VariableAndConstant\VariableAndConstant.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="VariableAndConstant:Make">
+        <MSBuild Projects="01_VariableAndConstant\VariableAndConstant.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="VariableAndConstant2">
+        <MSBuild Projects="02_VariableAndConstant2\VariableAndConstant2.dproj"/>
+    </Target>
+    <Target Name="VariableAndConstant2:Clean">
+        <MSBuild Projects="02_VariableAndConstant2\VariableAndConstant2.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="VariableAndConstant2:Make">
+        <MSBuild Projects="02_VariableAndConstant2\VariableAndConstant2.dproj" Targets="Make"/>
+    </Target>
     <Target Name="Build">
-        <CallTarget Targets="HelloWorld"/>
+        <CallTarget Targets="HelloWorld;VariableAndConstant;VariableAndConstant2"/>
     </Target>
     <Target Name="Clean">
-        <CallTarget Targets="HelloWorld:Clean"/>
+        <CallTarget Targets="HelloWorld:Clean;VariableAndConstant:Clean;VariableAndConstant2:Clean"/>
     </Target>
     <Target Name="Make">
-        <CallTarget Targets="HelloWorld:Make"/>
+        <CallTarget Targets="HelloWorld:Make;VariableAndConstant:Make;VariableAndConstant2:Make"/>
     </Target>
     <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
 </Project>

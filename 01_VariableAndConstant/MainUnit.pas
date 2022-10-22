@@ -51,7 +51,7 @@ procedure TFormMain.ShowValue;
 begin
   LabValueI.Caption := 'i = ' + Inttostr(i);
   LabValueX.Caption := 'x = ' + Inttostr(x);
-end;
+//end;
 
 procedure TFormMain.FormCreate(Sender: TObject);
 

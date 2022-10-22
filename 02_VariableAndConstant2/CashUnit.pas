@@ -1,4 +1,4 @@
-unit CashUnit;
+﻿unit CashUnit;
 
 interface
 
@@ -49,6 +49,9 @@ var
 implementation
 
 {$R *.dfm}
+
+const
+  USD2THB = 38;
 
 procedure TFormCash.BtnAddEntBudgetClick(Sender: TObject);
 begin
@@ -104,11 +107,13 @@ end;
 procedure TFormCash.ShowBudgets;
 begin
   MemoLog.Lines.Clear;
-  MemoLog.Lines.Append('PettyCash '#9#9#9' = ' + pettyCash.ToString);
-  MemoLog.Lines.Append('Entertainment Budget '#9#9' = ' + entBudget.ToString);
-  MemoLog.Lines.Append('Fuel Money '#9#9#9' = ' + fuelMoney.ToString);
+  MemoLog.Lines.Append('Exchange Rate : '#9#9#9'1 USD = ' + USD2THB.ToString + ' THB');
   MemoLog.Lines.Append('==============================');
-  MemoLog.Lines.Append('Wallet '#9#9#9#9' = ' + wallet.ToString);
+  MemoLog.Lines.Append('PettyCash '#9#9#9' = ฿' + (USD2THB * pettyCash).ToString);
+  MemoLog.Lines.Append('Entertainment Budget '#9#9' = ฿' + (USD2THB * entBudget).ToString);
+  MemoLog.Lines.Append('Fuel Money '#9#9#9' = ฿' + (USD2THB * fuelMoney).ToString);
+  MemoLog.Lines.Append('==============================');
+  MemoLog.Lines.Append('Wallet '#9#9#9#9' = ฿' + (USD2THB * wallet).ToString);
 end;
 
 procedure TFormCash.WalletTakeOne;
